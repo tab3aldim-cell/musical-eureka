@@ -8,16 +8,16 @@ jobs:
     steps:
       - name: Imajları Çek (Pull)
         run: |
-          docker pull bitnami/zookeeper:3.9.1
-          docker pull bitnami/kafka:3.7.0
-          docker pull provectuslabs/kafka-ui:v0.7.2
+          docker pull bitnami/zookeeper:7.5.0
+          docker pull bitnami/kafka:7.5.0
+          docker pull provectuslabs/kafka-ui:v0.7.1
 
       - name: Imajları Tar Olarak Kaydet (Save)
         run: |
           mkdir docker-images
-          docker save bitnami/zookeeper:3.9.1 -o docker-images/zookeeper.tar
-          docker save bitnami/kafka:3.7.0 -o docker-images/kafka.tar
-          docker save provectuslabs/kafka-ui:v0.7.2 -o docker-images/kafka-ui.tar
+          docker save bitnami/zookeeper:7.5.0 -o docker-images/zookeeper.tar
+          docker save bitnami/kafka:7.5.0 -o docker-images/kafka.tar
+          docker save provectuslabs/kafka-ui:v0.7.1 -o docker-images/kafka-ui.tar
 
       - name: Hepsini Ziple ve Yükle
         uses: actions/upload-artifact@v4
